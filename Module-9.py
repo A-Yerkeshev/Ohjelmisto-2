@@ -42,6 +42,15 @@ class Race:
         return True
     return False
 
+class ElectricCar(Auto):
+  def __init__(self, reg_num, max_speed, capacity):
+    super().__init__(reg_num, max_speed)
+    self.capacity = capacity
+class GasolineCar(Auto):
+  def __init__(self, reg_num, max_speed, volume):
+    super().__init__(reg_num, max_speed)
+    self.volume = volume
+
 # Tehtävä 1
 # print(f"""
 #   Auton rekisteritunnus: {auto1.rekisteritunnus};
@@ -96,3 +105,13 @@ class Race:
 #   hour += 1
 
 # race.print_status()
+
+# Tehtävä 2 Moduuli 11
+# ecar = ElectricCar('ABC-15', 180, 52.5)
+# gcar = GasolineCar('ACD-123', 165, 32.3)
+# ecar.kiihdytä(20)
+# gcar.kiihdytä(30)
+# ecar.kulje(3)
+# gcar.kulje(3)
+# print(f"Electric car km: {ecar.matka}")
+# print(f"Gasoline car km: {gcar.matka}")
