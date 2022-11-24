@@ -1,0 +1,115 @@
+@font-face {
+  font-family: kanit;
+  src: url('fonts/Kanit-Light.ttf');
+}
+
+:root {
+  --yellow: #fce93a;
+  --black: #14141a;
+  --white: #fafafa;
+}
+
+html {
+  font-size: 17px;
+  font-family: kanit, Verdana, sans-serif;
+  background-color: var(--black);
+  color: var(--black);
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: var(--white);
+  margin: 0rem 6rem 0 6rem;
+  padding: 0;
+  min-height: 99vh;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  margin: 0;
+}
+
+header {
+  background-color: var(--yellow);
+  padding: 1.2rem 0.4rem 0.4rem 0.4rem;
+  border-bottom: 0.4rem solid var(--black);
+}
+
+#main-form {
+  display: flex;
+}
+
+#query {
+  flex-grow: 1;
+}
+
+#submit {
+  background-color: var(--white);
+  border: 1px solid var(--black);
+  cursor: pointer;
+  font-size: 1rem;
+}
+
+#output {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding: 2rem;
+}
+
+.series-item {
+  flex-basis: 19.6rem;
+  border: 2px solid var(--black);
+  margin: 0.3rem;
+}
+
+.series-item h1 {
+  background-color: var(--yellow);
+  text-align: center;
+}
+
+.item-content {
+  padding: 0.4rem;
+}
+
+.item-content h2 {
+  font-size: 1.3rem;
+  font-weight: normal;
+}
+
+.item-content a {
+  text-decoration: none;
+  font-size: 1.2rem;
+}
+
+.item-content a:hover:after {
+  content: '';
+  font-size: 0;
+  width: 0;
+  height: 0;
+  border-left: 1.4rem solid var(--yellow);
+  border-top: 0.6rem solid transparent;
+  border-bottom: 0.6rem solid transparent;
+  margin-left: 0.4rem;
+  vertical-align: middle;
+}
+
+.btn-close {
+  position: absolute;
+  top: 0;
+  right: 0;
+  font-size: 2rem;
+  width: 3rem;
+  height: 3rem;
+  background-color: var(--yellow);
+  color: var(--black);
+  cursor: pointer;
+  border: 2px solid var(--black);
+}
+
+@media only screen and (max-width: 450px) {
+  body {
+    margin: 0rem;
+  }
+}

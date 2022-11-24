@@ -2,14 +2,22 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Module 4</title>
+    <link rel="stylesheet" href="styles.css">
     <script src="main.js" defer></script>
 </head>
 <body>
-    <form id="main-form" action="https://api.tvmaze.com/search/shows">
-        <input id="query" name="q" type="text">
-        <input type="submit" value="Search">
-    </form>
-    <p id="output"></p>
+    <header>
+        <form id="main-form" action="https://api.tvmaze.com/search/shows">
+            <input id="query" name="q" type="text" placeholder="Type TV series name here">
+            <input id="submit" type="submit" value="Search">
+        </form>
+    </header>
+    <div id="output"></div>
+    <dialog id="modal">
+        <button class="btn-close">&times;</button>
+        <iframe width="1200" height="750"></iframe>
+    </dialog>
 </body>
 </html>
